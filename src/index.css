@@ -1,1 +1,93 @@
 @import 'tailwindcss';
+
+:root {
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+
+  --color-bg: #ffffff;
+  --color-fg: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  --color-error: #dc2626;
+  --color-error-bg: #fef2f2;
+
+  --font-size-sm: clamp(0.8rem, 0.76rem + 0.2vw, 0.875rem);
+  --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+  --font-size-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --font-size-xl: clamp(1.375rem, 1.25rem + 0.6vw, 1.625rem);
+  --font-size-2xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);
+  --font-size-3xl: clamp(2.25rem, 1.85rem + 2vw, 3rem);
+
+  --space-section: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+}
+
+@theme {
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-bg: var(--color-bg);
+  --color-fg: var(--color-fg);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-error: var(--color-error);
+  --color-error-bg: var(--color-error-bg);
+
+  --font-size-sm: var(--font-size-sm);
+  --font-size-base: var(--font-size-base);
+  --font-size-lg: var(--font-size-lg);
+  --font-size-xl: var(--font-size-xl);
+  --font-size-2xl: var(--font-size-2xl);
+  --font-size-3xl: var(--font-size-3xl);
+
+  --spacing-section: var(--space-section);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Non-modal <dialog>-based mobile nav drawer: positioned below the header (top/height set inline from
+   its measured height) so it never covers it; slides in from the left. */
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  margin: 0;
+  width: 100vw;
+  max-width: none;
+  max-height: none;
+  border: none;
+  padding: 0;
+  background-color: var(--color-bg);
+  transform: translateX(-100%);
+  transition-property: transform, display;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+}
+
+.mobile-menu[open] {
+  transform: translateX(0);
+
+  @starting-style {
+    transform: translateX(-100%);
+  }
+}
