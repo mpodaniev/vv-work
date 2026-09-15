@@ -12,19 +12,22 @@ import { useAsyncResource, type AsyncResourceState } from '../hooks/useAsyncReso
 
 async function loadPartnersByCategory(signal: AbortSignal): Promise<Map<string, Partner[]>> {
   const partners = await getPartners({ signal })
-  const vacanciesByPartner = await Promise.all(
-    partners.map((partner) => getVacancies(partner.slug, { signal })),
+  const partnersWithVacancies = await Promise.all(
+    partners.map(async (partner) => ({
+      partner,
+      vacancies: await getVacancies(partner.slug, { signal }),
+    })),
   )
 
   const partnersByCategory = new Map<string, Partner[]>()
-  partners.forEach((partner, index) => {
-    const categorySlugs = new Set(vacanciesByPartner[index].map((vacancy) => vacancy.categorySlug))
+  for (const { partner, vacancies } of partnersWithVacancies) {
+    const categorySlugs = new Set(vacancies.map((vacancy) => vacancy.categorySlug))
     for (const categorySlug of categorySlugs) {
       const existing = partnersByCategory.get(categorySlug)
       if (existing) existing.push(partner)
       else partnersByCategory.set(categorySlug, [partner])
     }
-  })
+  }
 
   return partnersByCategory
 }
