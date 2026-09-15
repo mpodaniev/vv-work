@@ -10,6 +10,7 @@ export interface Partner {
   logoUrl?: string
   location: string
   industry: string
+  primaryCategorySlug: string
   description: string
   vacancyCount?: number
 }
