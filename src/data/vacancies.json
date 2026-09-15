@@ -1,0 +1,458 @@
+[
+  {
+    "id": "v1",
+    "partnerSlug": "northline-logistics",
+    "title": "Warehouse Operative",
+    "categorySlug": "logistics",
+    "location": "Rotterdam, Netherlands",
+    "employmentType": "Full-time",
+    "salary": "€2,200 / month",
+    "postedAt": "2026-08-20",
+    "description": "Pick, pack, and load pallets in a fast-paced distribution centre. Forklift certification is a plus but not required."
+  },
+  {
+    "id": "v2",
+    "partnerSlug": "northline-logistics",
+    "title": "Forklift Operator",
+    "categorySlug": "logistics",
+    "location": "Rotterdam, Netherlands",
+    "employmentType": "Full-time",
+    "salary": "€2,400 / month",
+    "postedAt": "2026-08-25",
+    "description": "Operate counterbalance and reach forklifts to move inbound and outbound freight throughout the warehouse."
+  },
+  {
+    "id": "v3",
+    "partnerSlug": "northline-logistics",
+    "title": "Inventory Coordinator",
+    "categorySlug": "logistics",
+    "location": "Rotterdam, Netherlands",
+    "employmentType": "Full-time",
+    "salary": "€2,600 / month",
+    "postedAt": "2026-09-01",
+    "description": "Track stock levels, reconcile shipments, and maintain accuracy across the warehouse management system."
+  },
+  {
+    "id": "v4",
+    "partnerSlug": "northline-logistics",
+    "title": "Delivery Driver, Category B",
+    "categorySlug": "drivers",
+    "location": "Rotterdam, Netherlands",
+    "employmentType": "Full-time",
+    "salary": "€2,500 / month",
+    "postedAt": "2026-08-15",
+    "description": "Drive a company van on local delivery routes, handing off parcels to retail and business customers."
+  },
+  {
+    "id": "v5",
+    "partnerSlug": "northline-logistics",
+    "title": "HGV Driver, Category CE",
+    "categorySlug": "drivers",
+    "location": "Rotterdam, Netherlands",
+    "employmentType": "Full-time",
+    "salary": "€3,100 / month",
+    "postedAt": "2026-09-05",
+    "description": "Transport freight between distribution hubs across the Benelux region on scheduled long-haul routes."
+  },
+  {
+    "id": "v6",
+    "partnerSlug": "northline-logistics",
+    "title": "Shift Supervisor",
+    "categorySlug": "logistics",
+    "location": "Rotterdam, Netherlands",
+    "employmentType": "Full-time",
+    "salary": "€3,000 / month",
+    "postedAt": "2026-07-30",
+    "description": "Oversee a warehouse shift team, coordinate loading schedules, and ensure safety procedures are followed."
+  },
+  {
+    "id": "v7",
+    "partnerSlug": "northline-logistics",
+    "title": "Facilities Cleaner",
+    "categorySlug": "other",
+    "location": "Rotterdam, Netherlands",
+    "employmentType": "Part-time",
+    "salary": "€1,400 / month",
+    "postedAt": "2026-08-10",
+    "description": "Keep warehouse offices and break rooms clean and stocked during evening hours."
+  },
+
+  {
+    "id": "v8",
+    "partnerSlug": "bright-build",
+    "title": "Bricklayer",
+    "categorySlug": "construction",
+    "location": "Warsaw, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 6,500 / month",
+    "postedAt": "2026-08-18",
+    "description": "Lay brick and block walls to plan on residential building sites across Warsaw."
+  },
+  {
+    "id": "v9",
+    "partnerSlug": "bright-build",
+    "title": "Site Carpenter",
+    "categorySlug": "construction",
+    "location": "Warsaw, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 6,800 / month",
+    "postedAt": "2026-08-22",
+    "description": "Build formwork, framing, and roof structures under the supervision of the site foreman."
+  },
+  {
+    "id": "v10",
+    "partnerSlug": "bright-build",
+    "title": "Electrician's Assistant",
+    "categorySlug": "construction",
+    "location": "Warsaw, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 6,200 / month",
+    "postedAt": "2026-09-02",
+    "description": "Support licensed electricians with wiring, conduit runs, and fixture installation on new-build sites."
+  },
+  {
+    "id": "v11",
+    "partnerSlug": "bright-build",
+    "title": "Crane Operator",
+    "categorySlug": "construction",
+    "location": "Warsaw, Poland",
+    "employmentType": "Contract",
+    "salary": "zł 8,000 / month",
+    "postedAt": "2026-07-28",
+    "description": "Operate a tower crane to move materials across a multi-storey residential build."
+  },
+  {
+    "id": "v12",
+    "partnerSlug": "bright-build",
+    "title": "Site Safety Officer",
+    "categorySlug": "construction",
+    "location": "Warsaw, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 7,500 / month",
+    "postedAt": "2026-08-05",
+    "description": "Monitor compliance with health and safety regulations across active construction sites."
+  },
+  {
+    "id": "v13",
+    "partnerSlug": "bright-build",
+    "title": "Site Administrator",
+    "categorySlug": "other",
+    "location": "Warsaw, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 5,800 / month",
+    "postedAt": "2026-09-08",
+    "description": "Handle scheduling, deliveries paperwork, and subcontractor coordination for the site office."
+  },
+
+  {
+    "id": "v14",
+    "partnerSlug": "steelworks-group",
+    "title": "CNC Machine Operator",
+    "categorySlug": "manufacturing",
+    "location": "Katowice, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 6,900 / month",
+    "postedAt": "2026-08-12",
+    "description": "Set up and run CNC milling machines to produce structural steel components to spec."
+  },
+  {
+    "id": "v15",
+    "partnerSlug": "steelworks-group",
+    "title": "Welder",
+    "categorySlug": "manufacturing",
+    "location": "Katowice, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 7,200 / month",
+    "postedAt": "2026-08-27",
+    "description": "Perform MIG and TIG welding on structural steel assemblies in a busy production plant."
+  },
+  {
+    "id": "v16",
+    "partnerSlug": "steelworks-group",
+    "title": "Quality Control Inspector",
+    "categorySlug": "manufacturing",
+    "location": "Katowice, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 6,600 / month",
+    "postedAt": "2026-09-03",
+    "description": "Inspect finished steel components against engineering drawings and tolerance specifications."
+  },
+  {
+    "id": "v17",
+    "partnerSlug": "steelworks-group",
+    "title": "Production Line Assistant",
+    "categorySlug": "manufacturing",
+    "location": "Katowice, Poland",
+    "employmentType": "Temporary",
+    "salary": "zł 5,400 / month",
+    "postedAt": "2026-07-25",
+    "description": "Support the production line with material handling and basic assembly tasks."
+  },
+  {
+    "id": "v18",
+    "partnerSlug": "steelworks-group",
+    "title": "Plant Maintenance Technician",
+    "categorySlug": "manufacturing",
+    "location": "Katowice, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 7,800 / month",
+    "postedAt": "2026-08-30",
+    "description": "Maintain and repair production machinery to minimise downtime across two shifts."
+  },
+
+  {
+    "id": "v19",
+    "partnerSlug": "harbor-hotel-group",
+    "title": "Front Desk Receptionist",
+    "categorySlug": "hospitality",
+    "location": "Gdansk, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 5,200 / month",
+    "postedAt": "2026-08-14",
+    "description": "Greet guests, manage check-in/check-out, and handle reservations at a seaside boutique hotel."
+  },
+  {
+    "id": "v20",
+    "partnerSlug": "harbor-hotel-group",
+    "title": "Housekeeping Attendant",
+    "categorySlug": "hospitality",
+    "location": "Gdansk, Poland",
+    "employmentType": "Part-time",
+    "salary": "zł 4,600 / month",
+    "postedAt": "2026-08-19",
+    "description": "Clean and prepare guest rooms to a high standard ahead of daily check-ins."
+  },
+  {
+    "id": "v21",
+    "partnerSlug": "harbor-hotel-group",
+    "title": "Restaurant Server",
+    "categorySlug": "hospitality",
+    "location": "Gdansk, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 4,900 / month",
+    "postedAt": "2026-09-04",
+    "description": "Serve guests in the hotel's seasonal restaurant, taking orders and coordinating with kitchen staff."
+  },
+  {
+    "id": "v22",
+    "partnerSlug": "harbor-hotel-group",
+    "title": "Sous Chef",
+    "categorySlug": "hospitality",
+    "location": "Gdansk, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 7,000 / month",
+    "postedAt": "2026-07-22",
+    "description": "Support the head chef in menu preparation and kitchen operations during the summer season."
+  },
+  {
+    "id": "v23",
+    "partnerSlug": "harbor-hotel-group",
+    "title": "Event Coordinator",
+    "categorySlug": "hospitality",
+    "location": "Gdansk, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 5,800 / month",
+    "postedAt": "2026-08-08",
+    "description": "Plan and run weddings and corporate events hosted at the hotel's function rooms."
+  },
+  {
+    "id": "v24",
+    "partnerSlug": "harbor-hotel-group",
+    "title": "Hotel Handyman",
+    "categorySlug": "other",
+    "location": "Gdansk, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 5,000 / month",
+    "postedAt": "2026-09-06",
+    "description": "Handle general repairs and maintenance requests across guest rooms and common areas."
+  },
+
+  {
+    "id": "v25",
+    "partnerSlug": "pixelforge-it",
+    "title": "Frontend Developer (React)",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 14,000 / month",
+    "postedAt": "2026-08-21",
+    "description": "Build and maintain client-facing React applications alongside a small product-focused team."
+  },
+  {
+    "id": "v26",
+    "partnerSlug": "pixelforge-it",
+    "title": "Backend Developer (Node.js)",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 15,000 / month",
+    "postedAt": "2026-08-29",
+    "description": "Design and maintain REST APIs and background services for fintech and healthcare clients."
+  },
+  {
+    "id": "v27",
+    "partnerSlug": "pixelforge-it",
+    "title": "QA Engineer",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 11,000 / month",
+    "postedAt": "2026-09-01",
+    "description": "Write and run manual and automated test suites across web and mobile client projects."
+  },
+  {
+    "id": "v28",
+    "partnerSlug": "pixelforge-it",
+    "title": "DevOps Engineer",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 16,500 / month",
+    "postedAt": "2026-07-27",
+    "description": "Manage CI/CD pipelines and cloud infrastructure for client production deployments."
+  },
+  {
+    "id": "v29",
+    "partnerSlug": "pixelforge-it",
+    "title": "Mobile Developer (React Native)",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 14,500 / month",
+    "postedAt": "2026-08-11",
+    "description": "Develop cross-platform mobile apps for logistics and healthcare clients."
+  },
+  {
+    "id": "v30",
+    "partnerSlug": "pixelforge-it",
+    "title": "UI/UX Designer",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 12,000 / month",
+    "postedAt": "2026-09-07",
+    "description": "Design interfaces and user flows for web and mobile client products."
+  },
+  {
+    "id": "v31",
+    "partnerSlug": "pixelforge-it",
+    "title": "Product Manager",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 17,000 / month",
+    "postedAt": "2026-08-03",
+    "description": "Own the roadmap and requirements gathering for a portfolio of client projects."
+  },
+  {
+    "id": "v32",
+    "partnerSlug": "pixelforge-it",
+    "title": "Technical Support Specialist",
+    "categorySlug": "it",
+    "location": "Krakow, Poland",
+    "employmentType": "Full-time",
+    "salary": "zł 9,500 / month",
+    "postedAt": "2026-08-24",
+    "description": "Respond to client support tickets and coordinate bug fixes with the engineering team."
+  },
+
+  {
+    "id": "v33",
+    "partnerSlug": "road-runners",
+    "title": "Van Delivery Driver",
+    "categorySlug": "drivers",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€2,300 / month",
+    "postedAt": "2026-08-16",
+    "description": "Deliver e-commerce parcels on assigned city routes using a company van."
+  },
+  {
+    "id": "v34",
+    "partnerSlug": "road-runners",
+    "title": "Long-Haul Truck Driver",
+    "categorySlug": "drivers",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€3,200 / month",
+    "postedAt": "2026-08-26",
+    "description": "Drive scheduled long-haul routes across Germany, Austria, and Switzerland."
+  },
+  {
+    "id": "v35",
+    "partnerSlug": "road-runners",
+    "title": "Courier, Category B",
+    "categorySlug": "drivers",
+    "location": "Berlin, Germany",
+    "employmentType": "Part-time",
+    "salary": "€1,800 / month",
+    "postedAt": "2026-09-02",
+    "description": "Handle same-day courier deliveries within the Berlin metropolitan area."
+  },
+  {
+    "id": "v36",
+    "partnerSlug": "road-runners",
+    "title": "Fleet Dispatcher",
+    "categorySlug": "logistics",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€2,700 / month",
+    "postedAt": "2026-07-31",
+    "description": "Coordinate daily routes and schedules for a fleet of 40+ delivery drivers."
+  },
+  {
+    "id": "v37",
+    "partnerSlug": "road-runners",
+    "title": "Warehouse Loader",
+    "categorySlug": "logistics",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€2,100 / month",
+    "postedAt": "2026-08-06",
+    "description": "Load and unload delivery vans at the start and end of each shift."
+  },
+  {
+    "id": "v38",
+    "partnerSlug": "road-runners",
+    "title": "Route Planner",
+    "categorySlug": "logistics",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€2,900 / month",
+    "postedAt": "2026-09-05",
+    "description": "Plan efficient daily delivery routes using the fleet management system."
+  },
+  {
+    "id": "v39",
+    "partnerSlug": "road-runners",
+    "title": "Fleet Mechanic",
+    "categorySlug": "other",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€2,800 / month",
+    "postedAt": "2026-08-13",
+    "description": "Maintain and repair the delivery van fleet to keep vehicles road-ready."
+  },
+  {
+    "id": "v40",
+    "partnerSlug": "road-runners",
+    "title": "Customer Support Agent",
+    "categorySlug": "other",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€2,000 / month",
+    "postedAt": "2026-08-28",
+    "description": "Handle delivery inquiries and rescheduling requests from customers over phone and chat."
+  },
+  {
+    "id": "v41",
+    "partnerSlug": "road-runners",
+    "title": "Night Shift Driver",
+    "categorySlug": "drivers",
+    "location": "Berlin, Germany",
+    "employmentType": "Full-time",
+    "salary": "€2,600 / month",
+    "postedAt": "2026-09-09",
+    "description": "Drive overnight replenishment routes between regional distribution hubs."
+  }
+]

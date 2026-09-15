@@ -1,0 +1,9 @@
+[
+  { "slug": "construction", "label": "Construction" },
+  { "slug": "manufacturing", "label": "Manufacturing" },
+  { "slug": "logistics", "label": "Logistics" },
+  { "slug": "hospitality", "label": "Hospitality" },
+  { "slug": "it", "label": "IT" },
+  { "slug": "drivers", "label": "Drivers" },
+  { "slug": "other", "label": "Other" }
+]

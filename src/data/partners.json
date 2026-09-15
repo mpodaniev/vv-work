@@ -1,0 +1,56 @@
+[
+  {
+    "id": "p1",
+    "slug": "northline-logistics",
+    "name": "Northline Logistics",
+    "location": "Rotterdam, Netherlands",
+    "industry": "Logistics & Freight",
+    "description": "Northline Logistics runs cross-border freight and warehousing operations across Western Europe, moving over 2,000 pallets a day for retail and manufacturing clients.",
+    "vacancyCount": 7
+  },
+  {
+    "id": "p2",
+    "slug": "bright-build",
+    "name": "Bright Build",
+    "location": "Warsaw, Poland",
+    "industry": "Construction",
+    "description": "Bright Build is a residential and commercial general contractor delivering mid-rise developments throughout Central Europe.",
+    "vacancyCount": 6
+  },
+  {
+    "id": "p3",
+    "slug": "steelworks-group",
+    "name": "Steelworks Group",
+    "location": "Katowice, Poland",
+    "industry": "Manufacturing",
+    "description": "Steelworks Group produces structural steel components for the automotive and construction industries from its two regional plants.",
+    "vacancyCount": 5
+  },
+  {
+    "id": "p4",
+    "slug": "harbor-hotel-group",
+    "name": "Harbor Hotel Group",
+    "location": "Gdansk, Poland",
+    "industry": "Hospitality",
+    "description": "Harbor Hotel Group operates a chain of boutique hotels along the Baltic coast, known for its seasonal staffing and guest-first service culture.",
+    "vacancyCount": 6
+  },
+  {
+    "id": "p5",
+    "slug": "pixelforge-it",
+    "name": "PixelForge IT",
+    "location": "Krakow, Poland",
+    "industry": "Software Development",
+    "description": "PixelForge IT builds custom web and mobile applications for clients in fintech, healthcare, and logistics.",
+    "vacancyCount": 8
+  },
+  {
+    "id": "p6",
+    "slug": "road-runners",
+    "name": "Road Runners",
+    "location": "Berlin, Germany",
+    "industry": "Transportation",
+    "description": "Road Runners provides long-haul and last-mile delivery services for e-commerce partners across the DACH region.",
+    "vacancyCount": 9
+  }
+]
