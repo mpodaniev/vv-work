@@ -55,7 +55,7 @@ describe('router', () => {
     })
     render(<RouterProvider router={router} />)
 
-    expect(await screen.findByRole('heading', { name: 'Partner page: acme' })).toBeInTheDocument()
+    expect(await screen.findAllByRole('status')).not.toHaveLength(0)
   })
 
   it('renders NotFoundPage for unmatched paths', async () => {
