@@ -3,11 +3,12 @@ import { useParams, useSearchParams } from 'react-router-dom'
 import { getPartnerBySlug } from '../api/partners'
 import type { Category } from '../api/types'
 import { getVacancies } from '../api/vacancies'
+import { CardGridSkeleton } from '../components/ui/CardGrid'
 import Container from '../components/ui/Container'
 import ErrorState from '../components/ui/ErrorState'
 import Skeleton from '../components/ui/Skeleton'
 import VacancyFilters from '../components/vacancies/VacancyFilters'
-import VacancyList, { VACANCY_GRID_CLASSNAME } from '../components/vacancies/VacancyList'
+import VacancyList from '../components/vacancies/VacancyList'
 import categoriesJson from '../data/categories.json'
 import { useAsyncResource } from '../hooks/useAsyncResource'
 import { useDebouncedValue } from '../hooks/useDebouncedValue'
@@ -45,6 +46,13 @@ export default function PartnerPage() {
     })
   }, [vacanciesResource.data, debouncedQuery, category])
 
+  // Only offer categories the partner actually has vacancies in — a filter pill that always
+  // yields "No vacancies match your filters" isn't a useful choice to present.
+  const availableCategories = useMemo(() => {
+    const vacancySlugs = new Set((vacanciesResource.data ?? []).map((v) => v.categorySlug))
+    return categories.filter((c) => vacancySlugs.has(c.slug))
+  }, [vacanciesResource.data])
+
   return (
     <Container className="flex flex-col gap-8 py-section">
       {partnerResource.status === 'error' && partnerResource.error && (
@@ -70,14 +78,10 @@ export default function PartnerPage() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <VacancyFilters categories={categories} />
+            <VacancyFilters categories={availableCategories} />
 
             {(vacanciesResource.status === 'idle' || vacanciesResource.status === 'loading') && (
-              <div className={VACANCY_GRID_CLASSNAME}>
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <Skeleton key={i} className="h-24 w-full" />
-                ))}
-              </div>
+              <CardGridSkeleton count={6} itemClassName="h-24 w-full" />
             )}
 
             {vacanciesResource.status === 'error' && vacanciesResource.error && (
