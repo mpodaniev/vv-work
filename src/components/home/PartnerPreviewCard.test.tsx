@@ -10,7 +10,6 @@ const partner: Partner = {
   name: 'Northline Logistics',
   location: 'Rotterdam, Netherlands',
   industry: 'Logistics & Freight',
-  primaryCategorySlug: 'logistics',
   description: 'Cross-border freight and warehousing operations.',
   vacancyCount: 7,
 }

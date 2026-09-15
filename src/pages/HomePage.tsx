@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { getPartners } from '../api/partners'
 import type { Partner } from '../api/types'
+import { getVacancies } from '../api/vacancies'
 import CategoryGrid, { CategoryGridSkeleton } from '../components/home/CategoryGrid'
 import EmployerCta from '../components/home/EmployerCta'
 import Hero from '../components/home/Hero'
@@ -8,6 +9,25 @@ import PartnerPreviewList, { PartnerPreviewListSkeleton } from '../components/ho
 import Container from '../components/ui/Container'
 import ErrorState from '../components/ui/ErrorState'
 import { useAsyncResource, type AsyncResourceState } from '../hooks/useAsyncResource'
+
+async function loadPartnersByCategory(signal: AbortSignal): Promise<Map<string, Partner[]>> {
+  const partners = await getPartners({ signal })
+  const vacanciesByPartner = await Promise.all(
+    partners.map((partner) => getVacancies(partner.slug, { signal })),
+  )
+
+  const partnersByCategory = new Map<string, Partner[]>()
+  partners.forEach((partner, index) => {
+    const categorySlugs = new Set(vacanciesByPartner[index].map((vacancy) => vacancy.categorySlug))
+    for (const categorySlug of categorySlugs) {
+      const existing = partnersByCategory.get(categorySlug)
+      if (existing) existing.push(partner)
+      else partnersByCategory.set(categorySlug, [partner])
+    }
+  })
+
+  return partnersByCategory
+}
 
 function renderSection<T>(
   resource: AsyncResourceState<T>,
@@ -24,6 +44,7 @@ function renderSection<T>(
 
 export default function HomePage() {
   const partnersResource = useAsyncResource<Partner[]>((signal) => getPartners({ signal }), [])
+  const partnersByCategoryResource = useAsyncResource<Map<string, Partner[]>>(loadPartnersByCategory, [])
 
   return (
     <>
@@ -35,8 +56,8 @@ export default function HomePage() {
             Browse by category
           </h2>
 
-          {renderSection(partnersResource, <CategoryGridSkeleton />, (partners) => (
-            <CategoryGrid partners={partners} />
+          {renderSection(partnersByCategoryResource, <CategoryGridSkeleton />, (partnersByCategory) => (
+            <CategoryGrid partnersByCategory={partnersByCategory} />
           ))}
         </section>
 
