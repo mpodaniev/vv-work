@@ -66,6 +66,16 @@ function renderPage(initialEntry: string) {
 }
 
 describe('PartnerPage', () => {
+  it('only offers category filters the partner has vacancies in', async () => {
+    renderPage('/partners/northline-logistics')
+
+    await screen.findByText('Warehouse Operative')
+
+    expect(screen.getByRole('button', { name: 'Logistics' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Drivers' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'IT' })).not.toBeInTheDocument()
+  })
+
   it('applies the category filter from the URL on initial load', async () => {
     renderPage('/partners/northline-logistics?category=logistics')
 

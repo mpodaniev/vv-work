@@ -45,6 +45,13 @@ export default function PartnerPage() {
     })
   }, [vacanciesResource.data, debouncedQuery, category])
 
+  // Only offer categories the partner actually has vacancies in — a filter pill that always
+  // yields "No vacancies match your filters" isn't a useful choice to present.
+  const availableCategories = useMemo(() => {
+    const vacancySlugs = new Set((vacanciesResource.data ?? []).map((v) => v.categorySlug))
+    return categories.filter((c) => vacancySlugs.has(c.slug))
+  }, [vacanciesResource.data])
+
   return (
     <Container className="flex flex-col gap-8 py-section">
       {partnerResource.status === 'error' && partnerResource.error && (
@@ -70,7 +77,7 @@ export default function PartnerPage() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <VacancyFilters categories={categories} />
+            <VacancyFilters categories={availableCategories} />
 
             {(vacanciesResource.status === 'idle' || vacanciesResource.status === 'loading') && (
               <div className={VACANCY_GRID_CLASSNAME}>
