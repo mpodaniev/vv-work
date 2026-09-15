@@ -8,6 +8,7 @@
   --color-fg: #0f172a;
   --color-muted: #64748b;
   --color-border: #e2e8f0;
+  --color-skeleton: #e2e8f0;
 
   --color-error: #dc2626;
   --color-error-bg: #fef2f2;
@@ -29,6 +30,7 @@
   --color-fg: var(--color-fg);
   --color-muted: var(--color-muted);
   --color-border: var(--color-border);
+  --color-skeleton: var(--color-skeleton);
   --color-error: var(--color-error);
   --color-error-bg: var(--color-error-bg);
 
