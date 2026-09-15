@@ -47,6 +47,8 @@ There is no backend: `api/client.ts` exposes a single `mockFetch(loader, opts)` 
 3. **Fighting unnecessary re-renders** — the search input writes to the URL instantly (cheap), while the expensive filtering/list render runs off a debounced value + `useMemo` + `memo` on the cards; verified in the Profiler.
 4. **Own `mockFetch` instead of MSW** — explicitly required by the brief; randomness is injected as a parameter, which is what makes the tests deterministic.
 5. **Partner hero and vacancy list are two independent resources** — so a slow/broken vacancy fetch doesn't block the header, and vice versa; if the partner isn't found (404), the vacancies section isn't rendered at all.
+6. **Category grid is derived from vacancy data, not a separate partner field** — the homepage used to carry its own `Partner.primaryCategorySlug`, a second source of truth that could drift from the vacancies' own `categorySlug`; it's gone, and `HomePage` now builds a `categorySlug → Partner[]` map straight from each partner's vacancies. A category tile lists every partner with a matching vacancy instead of picking one winner, so two partners sharing a category no longer silently overwrite each other.
+7. **Category filters on the partner page only offer categories that partner actually has** — showing all seven categories regardless of the partner's own vacancies means most pills would deterministically return "No vacancies match your filters"; `PartnerPage` intersects the category list with the partner's vacancy categories before handing it to `VacancyFilters`.
 
 ## Testing
 
