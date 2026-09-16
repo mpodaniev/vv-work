@@ -2,6 +2,8 @@
 
 VV Work is a job-matching platform for workers and employers in Europe. This repository is a frontend test assignment: a public homepage, a dynamic partner/employer page with a searchable, filterable vacancy list, and a contacts page with an application form.
 
+**Live:** https://vv-work-blush.vercel.app
+
 ## Stack
 
 Vite + React 19 + TypeScript (strict) + Tailwind CSS v4 + React Router + Vitest + Testing Library + ESLint + Prettier.
