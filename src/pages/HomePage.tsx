@@ -64,9 +64,14 @@ export default function HomePage() {
             Browse by category
           </h2>
 
-          {renderSection(partnersByCategoryResource, <CategoryGridSkeleton />, (partnersByCategory) => (
-            <CategoryGrid partnersByCategory={partnersByCategory} />
-          ))}
+          {/* min-height matches the skeleton's own rendered height so an error state
+              (much shorter than a 7-card grid) doesn't collapse the section and shift
+              everything below it — see PLAN.md item 17/18 CLS investigation. */}
+          <div className="min-h-44">
+            {renderSection(partnersByCategoryResource, <CategoryGridSkeleton />, (partnersByCategory) => (
+              <CategoryGrid partnersByCategory={partnersByCategory} />
+            ))}
+          </div>
         </section>
 
         <EmployerCta />
@@ -76,9 +81,11 @@ export default function HomePage() {
             Our partners
           </h2>
 
-          {renderSection(partnersResource, <PartnerPreviewListSkeleton />, (partners) => (
-            <PartnerPreviewList partners={partners} />
-          ))}
+          <div className="min-h-68">
+            {renderSection(partnersResource, <PartnerPreviewListSkeleton />, (partners) => (
+              <PartnerPreviewList partners={partners} />
+            ))}
+          </div>
         </section>
       </Container>
     </>

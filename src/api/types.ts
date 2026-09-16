@@ -26,6 +26,13 @@ export interface Vacancy {
   description: string
 }
 
+export interface ApplicationPayload {
+  name: string
+  phone?: string
+  telegram?: string
+  message?: string
+}
+
 export interface ApiError {
   message: string
   status: number
