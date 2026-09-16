@@ -46,7 +46,7 @@ describe('router', () => {
     })
     render(<RouterProvider router={router} />)
 
-    expect(await screen.findByRole('heading', { name: 'Contacts page' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Apply now' })).toBeInTheDocument()
   })
 
   it('renders PartnerPage at /partners/:slug', async () => {
