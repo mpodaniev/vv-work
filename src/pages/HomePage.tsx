@@ -10,12 +10,17 @@ import Container from '../components/ui/Container'
 import ErrorState from '../components/ui/ErrorState'
 import { useAsyncResource, type AsyncResourceState } from '../hooks/useAsyncResource'
 
+// Lower than the mockFetch default: this loader fans out into N+1 calls (getPartners
+// plus one getVacancies per partner), so the default 0.2 error rate would compound
+// into a near-certain failure once there are more than a couple of partners.
+const CATEGORY_LOADER_ERROR_RATE = 0.03
+
 async function loadPartnersByCategory(signal: AbortSignal): Promise<Map<string, Partner[]>> {
-  const partners = await getPartners({ signal })
+  const partners = await getPartners({ signal, errorRate: CATEGORY_LOADER_ERROR_RATE })
   const partnersWithVacancies = await Promise.all(
     partners.map(async (partner) => ({
       partner,
-      vacancies: await getVacancies(partner.slug, { signal }),
+      vacancies: await getVacancies(partner.slug, { signal, errorRate: CATEGORY_LOADER_ERROR_RATE }),
     })),
   )
 

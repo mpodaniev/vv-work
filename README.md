@@ -44,7 +44,7 @@ There is no backend: `api/client.ts` exposes a single `mockFetch(loader, opts)` 
 
 1. **State management without Redux/Zustand** — three levels (local `useState` → `useSearchParams` → `useAsyncResource`), because nothing needs to survive navigation or be shared between unrelated components — a global store would only add indirection.
 2. **Filters live in the URL, not in component state** — shareable links, works with back/forward; `VacancyFilters` is the only writer to `useSearchParams`, `PartnerPage` only reads.
-3. **Fighting unnecessary re-renders** — the search input writes to the URL instantly (cheap), while the expensive filtering/list render runs off a debounced value + `useMemo` + `memo` on the cards; verified in the Profiler.
+3. **Fighting unnecessary re-renders** — the search input writes to the URL instantly (cheap), while the expensive filtering runs off a debounced value via `useMemo`. That alone isn't enough: `VacancyList` itself must be wrapped in `memo` (not just `VacancyCard`) for the stable filtered array to actually stop the list from re-rendering on every keystroke — verified with a render counter.
 4. **Own `mockFetch` instead of MSW** — explicitly required by the brief; randomness is injected as a parameter, which is what makes the tests deterministic.
 5. **Partner hero and vacancy list are two independent resources** — so a slow/broken vacancy fetch doesn't block the header, and vice versa; if the partner isn't found (404), the vacancies section isn't rendered at all.
 

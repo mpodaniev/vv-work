@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import type { Vacancy } from '../../api/types'
 import CardGrid from '../ui/CardGrid'
 import VacancyCard from './VacancyCard'
@@ -6,7 +7,7 @@ interface VacancyListProps {
   vacancies: Vacancy[]
 }
 
-export default function VacancyList({ vacancies }: VacancyListProps) {
+const VacancyList = memo(function VacancyList({ vacancies }: VacancyListProps) {
   return (
     <CardGrid
       items={vacancies}
@@ -16,4 +17,6 @@ export default function VacancyList({ vacancies }: VacancyListProps) {
       emptyDescription="Try a different search term or category."
     />
   )
-}
+})
+
+export default VacancyList
