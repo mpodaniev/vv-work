@@ -5,6 +5,16 @@ import Skeleton from '../ui/Skeleton'
 
 const categories = categoriesJson as Category[]
 
+const CATEGORY_ICONS: Record<string, string> = {
+  construction: '🏗️',
+  manufacturing: '🏭',
+  logistics: '🚚',
+  hospitality: '🏨',
+  it: '💻',
+  drivers: '🚗',
+  other: '📋',
+}
+
 interface CategoryGridProps {
   partnersByCategory: Map<string, Partner[]>
 }
@@ -41,7 +51,10 @@ export default function CategoryGrid({ partnersByCategory }: CategoryGridProps) 
 
         return (
           <div key={category.slug} className="flex flex-col gap-2 rounded-md border border-border p-4">
-            <span className="text-center text-sm font-medium text-fg">{category.label}</span>
+            <span className="flex items-center justify-center gap-2 text-center text-lg font-bold text-fg">
+              <span aria-hidden="true">{CATEGORY_ICONS[category.slug]}</span>
+              {category.label}
+            </span>
             <ul className="flex flex-col gap-1">
               {categoryPartners.map((partner) => (
                 <li key={partner.slug}>
